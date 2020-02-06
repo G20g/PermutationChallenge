@@ -8,7 +8,9 @@ import java.nio.file.*;
 public class Permutation {
     public static void main(String[] args) {
         List<List<String>> records = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("src\\Data\\input.csv"))) {
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+        try (BufferedReader br = new BufferedReader(new FileReader("src\\Data\\"+str))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
